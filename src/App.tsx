@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
 import { Header } from './components/header';
-import { Logo } from './components/logo';
 import { SearchInput } from './components/search-input';
 import type { BibleResponse } from './types';
 
@@ -35,7 +34,15 @@ function App() {
       <div className="flex flex-col items-center px-4">
         <div className="flex flex-col items-center gap-16 pt-12">
           <Header />
-          <Logo src="../public/amormaior.jpg" alt="amormaior" />
+          <div className="relative">
+        <img
+          className="h-44 w-44 rounded-lg shadow-md object-cover
+                   transition-transform duration-300
+                   ring-2 ring-blue-100"
+          src="amormaior.jpg"
+          alt="amormaior"
+        />
+      </div>
         </div>
 
         <SearchInput
